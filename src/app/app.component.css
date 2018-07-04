@@ -1,18 +1,57 @@
 .sidebar-container {
-  width: 200px;
+  width: 250px;
   height: 100vh;
-  min-width: 200px;
-  max-width: 200px;
+  min-width: 250px;
+  max-width: 250px;
+  -webkit-transition: width 2s ease;
+  -moz-transition: width 2s ease;
+  -o-transition: width 2s ease;
+  transition: width 2s ease;
 }
 .target {
   color: white;
   cursor: pointer;
 }
-
-.sidebar-container active {
-  height: 100vh;
+.sidebar-container.in {
   width: 80px;
+  height: 100vh;
   min-width: 80px;
   max-width: 80px;
-  transform: translateX(0);
+
+}
+.sidebar-container #sidebar ul a span {
+  visibility: visible;
+}
+.sidebar-container.in #sidebar ul a span {
+  visibility: hidden;
+}
+.sidebar-container.in #sidebar ul li {
+  visibility: hidden;
+}
+.sidebar-container.in #sidebar ul a:hover {
+  color:red;
+}
+@media (max-width: 768px) {
+  .sidebar-container {
+    width: 80px;
+    height: 100vh;
+    min-width: 80px;
+    max-width: 80px;
+    visibility: visible;
+    -webkit-transition: width 2s ease;
+    -moz-transition: width 2s ease;
+    -o-transition: width 2s ease;
+    transition: width 2s ease;
+  }
+  .target {
+    color: white;
+    cursor: pointer;
+  }
+  .sidebar-container.in {
+    width: 0px;
+    height: 0vh;
+    min-width: 0px;
+    max-width: 0px;
+    visibility: hidden;
+  }
 }
