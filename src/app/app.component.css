@@ -26,7 +26,7 @@
   visibility: hidden;
 }
 .sidebar-container.in #sidebar ul li {
-  visibility: hidden;
+  margin-top: 0;
 }
 .sidebar-container.in #sidebar ul a:hover {
   color:red;

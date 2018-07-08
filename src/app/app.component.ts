@@ -12,6 +12,7 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     $('#sidebar-tg').click(function() {
       $('.sidebar-container').toggleClass('in');
+      // $('.toggle_collapse').show();
   });
   }
 }
